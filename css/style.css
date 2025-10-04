@@ -43,6 +43,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    float: left
 }
 
 h1 {
@@ -131,6 +132,8 @@ ul {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 35px;
+    margin-top: 75px;
 }
 
 .logo {
@@ -139,16 +142,19 @@ ul {
     font-weight: bold;
 }
 
-.menu-principal ul {
+.menu-principal {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xs);
+    justify-content: space-evenly;
 }
 
 .menu-principal a {
     border-radius: var(--border-radius);
     transition: background-color 0.2s;
     padding: var(--space-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #eee;
 }
 
 .menu-principal a:hover {
@@ -156,11 +162,20 @@ ul {
     padding: var(--space-sm);
 }
 
+#search {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+}
+
 .search-form {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 
+    justify-content: flex-end;
 }
 
 .search-form input,
@@ -195,6 +210,8 @@ ul {
     /* Opcional: faz este grupo de links tentar ocupar mais espaço no footer */
     gap: var(--space-md);
     /* Adiciona um espaço entre os links */
+
+    flex-wrap: wrap;
 }
 
 .footer-links a{
@@ -225,6 +242,15 @@ ul {
         "section"
         "sidebar"
         ;
+
+        box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.46);
+        -webkit-box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.46);
+        -moz-box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.46);
+}
+
+#btn-principal {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -238,6 +264,8 @@ ul {
     color: var(--cor-principal);
     border: 1px solid var(--cor-secundaria);
     cursor: pointer;
+
+    margin: 7px;
 }
 
 .main-button:hover{
